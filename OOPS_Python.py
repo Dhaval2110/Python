@@ -1,3 +1,6 @@
+# Ref http://net-informations.com/python/iq/init.htm
+
+
 #Q: Define class has 2 arguments name and age and print it 
 class ABC:
 	def __init__(self,name,age):
@@ -36,3 +39,31 @@ class ChildA(Base):
 
 ChildA() 
 #ChildB()
+
+##################################################################
+
+#Q. What is getattr()?
+
+class Person:
+    age = 23
+    name = "Adam"
+
+person = Person()
+print('The age is:', getattr(person, "age"))
+print('The age is:', person.age)
+#print("Error : ",getattr(person,"Value")) ------> No attributes called value
+####################################################################
+
+# Q. What is dir in python?
+
+class Person:
+  def __dir__(self):
+    return ['age', 'name', 'salary']
+    
+
+teacher = Person()
+print(dir(teacher))
+
+
+##########################################################################
+
