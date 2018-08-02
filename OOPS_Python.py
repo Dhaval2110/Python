@@ -1,5 +1,5 @@
 # Ref http://net-informations.com/python/iq/init.htm
-
+####NVIDIA#####
 
 #Q: Define class has 2 arguments name and age and print it 
 class ABC:
@@ -66,4 +66,46 @@ print(dir(teacher))
 
 
 ##########################################################################
+##ARM##
 
+# Q. How to remove duplicates from list without using set() function?
+s=[]
+l=[1,1,2,3,3,2,1,2,3,4,5,5,5,5,7]
+for i in l:
+    if i not in s:
+        s.append(i)
+
+print(set(l))
+print (s)
+
+##################################################################################
+
+# Q. Let a =[1,2,3,4,5] then what will be the output of a[2],a[2:],a[10],a[10:]?
+a=[1,2,3,4,5]
+print(a[2])                #-----> O/P = 3
+print(a[2:])               #-----> O/P =[3,4,5]
+#print(a[10])              #-----> O/P = List out of index
+print(a[10:])              #-----> O/P = [] , an empty list
+
+#####################################################################################
+# Q. I have a directory named Dhaval inside i have subfolders names test1,test2...and each subfolder
+# is consist of files having names as test1.c,test2.c etc. How to change subfolder and files names
+# from test to Dhaval without changing digit conventions?
+## eg : Dhaval\Test1\test1.c,test2.c --->Dhaval\Dhaval1\Dhaval1.c,Dhaval2.c....
+import os
+s=''
+for root,dirs,files in os.walk(r'C:\Users\DHAVAL\Desktop\Old resumes'):
+    for f in files:
+        if f.startswith('Dhaval'):
+            s=f.replace('Dhaval','Resume')
+            os.rename(os.path.join(root,f),os.path.join(root,s))
+
+###############################################################################################
+# Q. How will you print a file removing first five and last 10 lines form a file?
+l=[]
+with open('C:/Users/Dhaval/Desktop/record.txt','r')as f:
+    l=f.readlines()
+    l=l[2:-7]
+    with open('C:/Users/Dhaval/Desktop/record.txt','w') as fd:
+        for item in l:
+            fd.write("%s" % item)
