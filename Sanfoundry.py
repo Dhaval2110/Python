@@ -1,6 +1,6 @@
 
 ##### https://www.sanfoundry.com/python-problems-solutions/ ########
-
+"""
 # avg value
 l=[1,11,25,48,65,32,89]
 e=len(l)
@@ -250,5 +250,67 @@ for i in range(21):
 	if i%2==0 and i%5!=0:
 	   a.append(i)
 print(a)
+
+
+# Random no generate between 1 to 20
+
+l=[]
+import random
+l.append(random.randint(1,20))
+print(l)
+
+# Swap first and last element of a list
+
+l=[1,2,3,4,5]
+t=l[-1]
+l[-1]=l[0]
+l[0]=t
+print(l)
+
+# remove duplicatr in the list
+
+s=[]
+l=[1,2,3,1,1,3,4,5,6]
+
+for i in l:
+    if i not in s:
+        s.append(i)
+
+print(s)
+print(set(l))
+
+# alphabatic sort
+
+l=['dhaval','mehta','united','FCBarca','spain']
+s=[]
+count=65
+while len(s)<len(l):
+	for i in range(0,len(l)):
+		if ord(l[i][:1])==count:
+			s.append(l[i])
+			count+=1
+	count+=1
+
+print(s)
+print(sorted(l))
+
+# Python Program to Read a List of Words and Return the Length of the Longest One
+
+# bubble sort
+
+l=['dhaval','mehta','Manchester','California','gujarat','vadodara']
+t=" "
+for i in range(0,len(l)-1):
+    for j in range(0,len(l)-i-1):
+        if len(l[j])>len(l[j+1]):
+            t=l[j]
+            l[j]=l[j+1]
+            l[j+1]=t
+
+print(l)
+print(len(l[-1]))
+"""
+
+
 
 
