@@ -354,9 +354,18 @@ for i in range(0,len(s)):
 		   c=c+1
 print(c)
 
-"""
 # Form a New String where the First Character and the Last Character have been Exchanged
 
 s="dhaval"
 s=s[-1:]+s[1:-1]+s[:1]              # IMP Logic
+print(s)
+
+"""
+#Take in a String and Replace Every Blank Space with Hyphen
+
+s="my name is manchester united"
+for i in s:
+	if i == " ":
+		s=s.replace(i,'-')
+
 print(s)
