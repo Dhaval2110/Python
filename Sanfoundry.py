@@ -309,8 +309,54 @@ for i in range(0,len(l)-1):
 
 print(l)
 print(len(l[-1]))
+
+
+# remove ith occurance of given in alist where word can repeat        ----- Incomplete
+
+l=['apple','apple','ball','cat','cat']
+
+a=[]
+for i in l:
+     if 'cat'!=str(l[i]):
+       a.append(l[i])
+
+print(a)
+
+####################### STRRRIIIIINNNGGGGGGSSSS ################
+
+# Replace all 'a' with $
+
+s="dhaval"
+s=s.replace('a','$')
+print(s)
+
+# Remove the nth Index Character from a Non-Empty String
+
+s="dhaval"
+n=4
+
+for i in range(0,len(s)):
+    if i==n:
+        s=s.replace(s[i],'')
+
+print(s)
+
+
+# Find the no of vowels in a sring
+
+
+s="my name is manchester united"
+l=['a','e','i','o','u']
+c=0
+for i in range(0,len(s)):
+	for j in range(0,len(l)):
+		if s[i]==l[j] :
+		   c=c+1
+print(c)
+
 """
+# Form a New String where the First Character and the Last Character have been Exchanged
 
-
-
-
+s="dhaval"
+s=s[-1:]+s[1:-1]+s[:1]              # IMP Logic
+print(s)
