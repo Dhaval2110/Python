@@ -464,4 +464,33 @@ print(l)
 print(u)
 print(space)
 
+#Count the Occurrences of Each Word in a Given String Sentence
+a=[]
+s="my name is dhaval, dhaval is a decent person"
+sub="is"
+a=s.split(" ")
+c=0
+for i in range(len(a)):
+    if sub==a[i]:
+        c=c+1
+print(c)
+
+# Form a New String Made of the First 2 and Last 2 characters From a Given
+# String
+c=0
+s="Manchester United"
+# for i in s:
+#     c=c+1
+#l=s[0:2]+s[c-2:c]
+l=s[0:2]+s[-2:]
+print(l)
 """
+
+# Check if a Substring is Present in a Given String
+
+s="Mo salah is still the king of premier league"
+sub="is"
+if s.find(sub)==-1:
+    print("False")
+else:
+    print("True")
