@@ -426,4 +426,42 @@ elif c2>c1:
 else:
     print("Both are same")
 
+
+# Count Number of Lowercase Characters in a String without in built function
+
+s="My name is dhaval"
+c=0
+for i in range(len(s)):
+    if (ord(s[i])>=97 and ord(s[i])<=122):
+        c=c+1
+
+print(c)
+
+# Check if a String is a Palindrome or Not
+
+s="malayalam"
+c=s[::-1]
+
+if s==c:
+    print("String is palindrom")
+else:
+    print("String is not palindrom")
+
+#Calculate the Number of Upper Case Letters and Lower Case Letters in a String
+
+s="My Name Is Dhaval"
+l=0
+u=0
+space=0
+for i in range(len(s)):
+    if ord(s[i])>=97 and ord(s[i])<=122:
+        l=l+1
+    elif ord(s[i])>=62 and ord(s[i])<=96:
+        u=u+1
+    else:
+        space=space+1
+print(l)
+print(u)
+print(space)
+
 """
