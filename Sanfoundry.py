@@ -354,13 +354,13 @@ for i in range(0,len(s)):
 		   c=c+1
 print(c)
 
-# Form a New String where the First Character and the Last Character have been Exchanged
+# Form a New String where the First Character and the Last Character have been
+Exchanged
 
 s="dhaval"
 s=s[-1:]+s[1:-1]+s[:1]              # IMP Logic
 print(s)
 
-"""
 #Take in a String and Replace Every Blank Space with Hyphen
 
 s="my name is manchester united"
@@ -369,3 +369,61 @@ for i in s:
 		s=s.replace(i,'-')
 
 print(s)
+# Calculate the Length of a String Without Using a Library Function
+
+s="my name is dhaval"
+c=0
+for i in s:
+    if i!='\0':
+        c=c+1
+
+print(c,"count")
+
+#Characters of Odd Index Values in a String
+
+#s="dhaval mehta"
+s="hello"
+f=""
+for i in range(0,len(s)):
+    if i%2==0:
+        f=f+s[i]
+
+print(f)
+
+# Calculate the Number of Words and the Number of Characters Present in a String
+
+s="I am manchester united fan"
+word=1
+char=0
+for i in s:
+    if i==" ":
+        word=word+1
+    if i!="\0":
+        char=char+1
+
+print("No of words",word)
+print("No of char",char)
+
+# Take in Two Strings and Display the Larger String without Using Built-in
+#  Functions
+
+import sys
+a=sys.argv[1]
+b=sys.argv[2]
+c1=0
+c2=0
+for i in a:
+    if i!="\0":
+        c1=c1+1
+for i in b:
+    if i!="\0":
+        c2=c2+1
+
+if c1>c2:
+    print("%s"% a,"String is greater")
+elif c2>c1:
+    print("%s"% b,"String is greater")
+else:
+    print("Both are same")
+
+"""
