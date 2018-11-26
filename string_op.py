@@ -25,17 +25,17 @@
 # c.print()
 
 # how to find capital letters in a file
-# l=[]  --> incomplete
 # c=0
-# fd=open(r"C:\Users\c_dhavme\Desktop\dha\log.txt","r")
-# l=fd.readlines()
-# print(l)
-# for i in l:
-# 	if i.upper():
-# 		c=c+1
-# 	else:
-# 		pass
+# l=[]
+# with open(r"C:\Users\c_dhavme\Desktop\log.txt","r") as fs:
+# 	content=fs.read()
+# 	for i in content:
+# 		if (ord(i)>=65 and ord(i)<=90):
+# 			c+=1
+# 			l.append(i)
 # print(c)
+# print(l)
+
 
 # What is map function? how can i use?
 def f(i):
