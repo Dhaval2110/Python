@@ -265,3 +265,17 @@ f = open(file-name, "rb")
 # This Open() method allows the file to get opened in binary mode to make it portable for # use. 
 s = f.read(8)
 x, y, z = struct.unpack(">hhl", s)
+
+
+51)How Do I Share Global Variables Across Modules?
+Answer :
+The canonical way to share information across modules within a single program is to create a special module (often called config or cfg). Just import the config module in all modules of your application; the module then becomes available as a global name. Because there is only one instance of each module, any changes made to the module object get reflected everywhere. For example:
+config.py:
+x = 0 # Default value of the 'x' configuration setting
+mod.py:
+import config
+config.x = 1
+main.py:
+import config
+import mod
+print config.x
