@@ -26,4 +26,16 @@ print('\n')
 for i in range(1,12):
 	print(i,end = ' ')
   
+
+# Generator 
+
+
+def my_gen():
+	print("Inside generator")
+	yield 'a'
+	yield 'b'
+	yield 'c'
+
+for i in my_gen():
+	print(i)
  
