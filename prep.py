@@ -26,12 +26,59 @@
 # print(b,"b")
 
 #method 2
-a=10
-b=20
-print("After swap")
-print(a,"a")
-print(b,"b")
-a,b=b,a
-print("After swap")
-print(a,"a")
-print(b,"b")
+# a=10
+# b=20
+# print("After swap")
+# print(a,"a")
+# print(b,"b")
+# a,b=b,a
+# print("After swap")
+# print(a,"a")
+# print(b,"b")
+
+
+#fctorial
+# def fact(n):
+# 	if n==0 | n==1:
+# 		return 1
+# 	else:
+# 		return n*fact(n-1)
+
+# n=3
+# s=fact(n)
+# print(s)
+
+# #fib
+# def fib(n):
+# 	if n==0 or n==1:
+# 		return 1
+# 	else:
+# 		return fib(n-1)+fib(n-2)
+
+# n=10
+# for i in range(n):
+# 	s=fib(i)
+# 	print(s)
+
+#remove duplicate
+
+# l=[1,2,1,1,2,2,3,4,4,2]
+# s=[]
+# for i in l:
+# 	if i not in s:
+# 		s.append(i)
+
+# print(s)
+
+
+# largest from list
+l=[2,12,22,34,5,11,54,90]
+
+for i in range(0,len(l)):
+	for j in range(0,len(l)-1):
+		if l[i]>l[j]:
+			t=l[i]
+			l[i]=l[j]
+			l[j]=t
+
+print(l)
