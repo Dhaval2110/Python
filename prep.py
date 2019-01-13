@@ -71,14 +71,42 @@
 # print(s)
 
 
-# largest from list
-l=[2,12,22,34,5,11,54,90]
+# # largest from list
+# l=[2,12,22,34,5,11,54,90]
 
-for i in range(0,len(l)):
-	for j in range(0,len(l)-1):
-		if l[i]>l[j]:
-			t=l[i]
-			l[i]=l[j]
-			l[j]=t
+# for i in range(0,len(l)):
+# 	for j in range(0,len(l)-1):
+# 		if l[i]>l[j]:
+# 			t=l[i]
+# 			l[i]=l[j]
+# 			l[j]=t
 
-print(l)
+# print(l)
+
+# # How to add two list alternatively > Facebook.com question
+
+# l1=[1,2,3]
+# l2=[4,5,6]
+# l3=[]
+
+# l=len(l1)+len(l2)
+# l3=[0]*l                 #mandatory to create empty list like this :D 
+# l3[::2]=l1
+# l3[1::2]=l2
+
+# print(l3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
