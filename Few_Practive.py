@@ -6,5 +6,5 @@ class ABC:
 	def print(self):
 		print(self.name)
 
-c=ABC('Dhaval')
+c=ABC('Dhaval Mehta')
 c.print()
