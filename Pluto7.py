@@ -49,3 +49,16 @@ lis(two)
 print(two)
 # Ans : [1] , we can pass list as an argument of a function
 
+
+6. 
+one = [1,2,3,[5]]
+#two=list(one)  ---> Deep copy
+#two=one --> Sallow copy
+two=list(one)
+print(two)
+one[3][0]=6
+print(one)
+two[1]=36
+print(one)
+
+#ANS : [1,2,3,[6]] final as deep copy
