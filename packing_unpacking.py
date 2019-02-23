@@ -1,4 +1,4 @@
-# definition : mapping two tupples
+# definition : In packing, we place value into a new tuple while in unpacking we extract those values back into variables.
 
 
 x=('dhaval',10,'mehta')
