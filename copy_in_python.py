@@ -8,6 +8,8 @@ Some objects can be copied more easily. Dictionaries have a copy() method:
 newdict = olddict.copy()
 Sequences can be copied by slicing:
 new_l = l[:]
+
+reference :https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/
 '''
 #EX:
 # 1. Shallow Copy  ---> Address wise copy 
