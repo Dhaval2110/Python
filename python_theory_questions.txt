@@ -279,3 +279,8 @@ main.py:
 import config
 import mod
 print config.x
+
+52)What’s The Process To Get The Home Directory Using ‘~’ In Python?
+Ans:You need to import the os module, and then just a single line would do the rest.
+	import os
+	print (os.path.expanduser('~'))
