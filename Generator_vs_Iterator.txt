@@ -1,0 +1,38 @@
+Comparison Between Python Generator vs Iterator
+Let’s see the difference between Iterators and Generators in python.
+
+In creating a python generator, we use a function. But in creating an iterator in python, we use the iter() and next() functions.
+A generator in python makes use of the ‘yield’ keyword. A python iterator doesn’t.
+Python generator saves the states of the local variables every time ‘yield’ pauses the loop in python. An iterator does not make use of local variables, all it needs is iterable to iterate on.
+A generator may have any number of ‘yield’ statements.
+You can implement your own iterator using a python class; a generator does not need a class in python.
+To write a python generator, you can either use a Python function or a comprehension. But for an iterator, you must use the iter() and next() functions.
+Generator in python let us write fast and compact code. This is an advantage over Python iterators. They are also simpler to code than do custom iterator.
+Python iterator is more memory-efficient. Lest see this with example below:
+>>> def func():
+       i=1
+       while i>0:
+                 yield i
+                 i-=1
+>>> for i in func():
+             print(i)
+1
+
+>>> func().__sizeof__()
+32
+Here, we got 32. But for a python iterator, we get 16.
+
+>>> iter([1,2]).__sizeof__()
+16
+
+A generator returns a generator. Below an s example to understand it.
+>>> f=func()
+>>> type(f)
+<class ‘generator’>
+However, an iterator returns an iterator object.
+
+>>> i=iter({1,3,2})
+>>> type(i)
+<class ‘set_iterator’>
+
+python Generator provides even more functionality as co-routines.
