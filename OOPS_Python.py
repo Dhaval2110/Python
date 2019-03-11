@@ -131,3 +131,60 @@ c=ABC(10,20)
 c.setdata(11,"fun")
 print(c.getdata())
 c.print()
+
+
+### Returning in Class #######
+class ABC:
+	def __init__(self,name,age):
+		self.name=name
+		self.age=age
+	def creator(self):
+		return "{} is {} old".format(self.name,self.age)            # Can return instances like this
+
+c=ABC("Dhaval",25)
+print(c.creator())
+
+
+############# Inheritence with super() function ########
+
+class ABC:
+	def __init__(self):
+		print("In a base class")
+
+class XYZ(ABC):
+	def __init__(self):
+		super().__init__()
+		print("In a derived class")
+
+C=XYZ()
+
+
+################# Instantanting Objects ################
+# class ABC:
+# 	def __init__(self):
+# 		print("In ABC Class")
+# 	def setdata(self,a,b):
+# 		self.a=a
+# 		self.b=b
+# 	def print(self):
+# 		print(self.a)
+# 		print(self.b)
+
+# a=ABC()
+# print(a)
+# b=ABC()
+# print(b)
+# if a==b:
+# 	print("True")
+# else:
+# 	print("False")
+
+'''
+Output will be False
+Reson : In ABC Class
+<__main__.ABC object at 0x02F93650>
+In ABC Class
+<__main__.ABC object at 0x02FFBB30>
+False
+'''
+
