@@ -1,3 +1,4 @@
+#method 1
 #base class
 class abc:
 	def __init__(self):
@@ -14,3 +15,19 @@ print(issubclass(xyz,abc))                        # True if inherited , False if
 
 #calling function where c is a consructor
 c=xyz()
+
+# method 2
+class Dog:
+	def __init__(self,name):
+		self.name=name
+
+	def descriptor(self):
+		return "{} is german shefford".format(self.name)
+	
+class Gernman(Dog):
+	def run(self,speed):
+		return "{} runs {}".format(self.name,speed)
+
+c=Gernman("Rocky")
+print(c.descriptor())
+print(c.run("Slowly"))
