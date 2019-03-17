@@ -12,3 +12,17 @@ if flag==1:
 	print("not")
 else:
 	print("Yes")
+'''
+for number:
+n=121
+num=n
+s=0
+while n:
+	s=s*10+(n%10)
+	n=n//10
+
+if s is num:
+	print("True")
+else:
+	print("no")
+'''
