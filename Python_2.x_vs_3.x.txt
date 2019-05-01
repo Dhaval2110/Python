@@ -1,0 +1,37 @@
+Q : What is the difference between python 2.x and 3.x ?
+Ans: 1) Division operator
+print 7 / 5
+print -7 / 5    
+Output in Python 2.x 
+1 
+-2 
+Output in Python 3.x : 
+1.4 
+-1.4 
+2) print function
+print 'Hello, Geeks'      # Python 3.x doesn't support 
+print('Hope You like these facts') 
+3) Unicode
+print(type('default string ')) 
+print(type(b'string with b ')) 
+Output in Python 2.x (Bytes is same as str) 
+<type 'str'> 
+<type 'str'>   
+Output in Python 3.x (Bytes and str are different) 
+<class 'str'> 
+<class 'bytes'> 
+4)xrange
+In Python 3.x, the range function now does what xrange does in Python 2.x,
+so to keep our code portable, we might want to stick to using range instead. 
+So Python 3.x’s range function is xrange from Python 2.x.
+5)Error Handling
+Python 2.x : 
+try: 
+    trying_to_check_error 
+except NameError, err: 
+    print err, 'Error Caused'
+python 3.x: 
+try: 
+     trying_to_check_error 
+except NameError as err: # 'as' is needed in Python 3.x 
+     print (err, 'Error Caused') 
