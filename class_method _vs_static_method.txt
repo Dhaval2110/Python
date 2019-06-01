@@ -1,0 +1,54 @@
+Ref: 
+https://www.tutorialspoint.com/class-method-vs-static-method-in-python
+https://www.geeksforgeeks.org/class-method-vs-static-method-python/
+
+What is difference between class method and static method?
+The class method in Python is a method, which is bound to the class but not the object of that class. The static methods are also same but there are some basic differences. For class methods, we need to specify @classmethod decorator, and for static method @staticmethod decorator is used.
+
+Syntax for Class Method.
+
+class my_class:
+   @classmethod
+  deffunction_name(cls, arguments):
+      #Function Body
+      return value
+Syntax for Static Method.
+
+class my_class:
+   @staticmethod
+   deffunction_name(arguments):
+      #Function Body
+      return value
+What are the differences between Classmethod and StaticMehtod?
+Class Method	Static Method
+The class method takes cls (class) as first argument.	The static method does not take any specific parameter.
+Class method can access and modify the class state.	Static Method cannot access or modify the class state.
+The class method takes the class as parameter to know about the state of that class.	Static methods do not know about class state. These methods are used to do some utility tasks by taking some parameters.
+@classmethod decorator is used here.	@staticmethod decorator is used here.
+The Static methods are used to do some utility tasks, and class methods are used for factory methods. The factory methods can return class objects for different use cases.
+
+Example code
+from datetime import date as dt
+class Employee:
+   def __init__(self, name, age):
+      self.name = name
+      self.age = age
+   @staticmethod
+   defisAdult(age):
+      if age > 18:
+         return True
+      else:
+         return False
+   @classmethod
+   defemp_from_year(emp_class, name, year):
+      return emp_class(name, dt.today().year - year)
+   def __str__(self):
+      return 'Employee Name: {} and Age: {}'.format(self.name, self.age)
+e1 = Employee('Dhiman', 25)
+print(e1)
+e2 = Employee.emp_from_year('Subhas', 1987)
+print(e2)
+print(Employee.isAdult(25))
+print(Employee.isAdult(16))
+
+
