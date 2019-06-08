@@ -287,3 +287,7 @@ Ans:You need to import the os module, and then just a single line would do the r
 	
 53) How to achieve Encapsulation in python?
 Ans : Using OOP in Python, we can restrict access to methods and variables. This prevent data from direct modification which is called encapsulation. In Python, we denote private attribute using underscore as prefix i.e single “ _ “ or double “ __“.
+
+54)How will you share global variables across modules?
+
+Ans. To do this for modules within a single program, we create a special module, then import the config module in all modules of our application. This lets the module be global to all modules
