@@ -1,0 +1,12 @@
+# find the second largest no from the list
+l = [1,4,77,8,10,33,56]
+m=max(l[0],l[1])                              # max is max of first 2 elements of list
+s=min(l[0],l[1])                              # second max is min of first 2 elements of the list
+for i in range(2,len(l)):
+	if l[i]>m:
+		s=m
+		m=l[i]
+	elif l[i]>s:
+		s=l[i]
+
+print("second lagest is",s)
