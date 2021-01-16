@@ -1,2 +1,3 @@
 # Python
-All basic as well as Important concepts 
+Useful links :
+https://docs.pytest.org/en/stable/
